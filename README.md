@@ -28,6 +28,16 @@ Latest stable version
 cordova plugin add cordova-plugin-geofence
 ```
 
+My custom plugin
+
+```
+cordova plugin add https://github.com/MohamedMardona/ionic-geofence.git
+```
+
+## Note
+PLease add cordova-plugin-add-swift-support Version 1.6.0 before add it
+
+
 ## Removing the Plugin from project
 
 Using cordova CLI
@@ -310,47 +320,6 @@ window.geofence.onTransitionReceived = function (geofences) {
 };
 ```
 
-## Listening for geofence transitions in native code
-
-### Android
-
-For android plugin broadcasting intent `com.cowbell.cordova.geofence.TRANSITION`. You can implement your own `BroadcastReceiver` and start listening for this intent.
-
-Register receiver in `AndroidManifest.xml`
-
-```xml
-<receiver android:name="YOUR_APP_PACKAGE_NAME.TransitionReceiver">
-    <intent-filter>
-        <action android:name="com.cowbell.cordova.geofence.TRANSITION" />
-    </intent-filter>
-</receiver>
-```
-
-Example `TransitionReceiver.java` code
-
-```java
-......
-import com.cowbell.cordova.geofence.Gson;
-import com.cowbell.cordova.geofence.GeoNotification;
-
-public class TransitionReceiver extends BroadcastReceiver {
-
-    @Override
-    public void onReceive(Context context, Intent intent) {
-        String error = intent.getStringExtra("error");
-
-        if (error != null) {
-            //handle error
-            Log.println(Log.ERROR, "YourAppTAG", error);
-        } else {
-            String geofencesJson = intent.getStringExtra("transitionData");
-            GeoNotification[] geoNotifications = Gson.get().fromJson(geofencesJson, GeoNotification[].class);
-            //handle geoNotifications objects
-        }
-    }
-}
-```
-
 ## When the app is opened via Notification click
 
 Android, iOS only
@@ -385,29 +354,4 @@ window.geofence.addOrUpdate({
 })
 ```
 
-# Development
 
-## Installation
-
-- git clone https://github.com/cowbell/cordova-plugin-geofence
-- change into the new directory
-- `npm install`
-
-## Running tests
-
-- Start emulator
-- `cordova-paramedic --platform android --plugin .`
-
-### Testing on iOS
-
-Before you run `cordova-paramedic` install `npm install -g ios-sim`
-
-### Troubleshooting
-
-Add `--verbose` at the end of `cordova-paramedic` command.
-
-## License
-
-This software is released under the [Apache 2.0 License](http://opensource.org/licenses/Apache-2.0).
-
-© 2014-2016 Cowbell-labs. All rights reserved

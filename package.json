@@ -22,9 +22,8 @@
   "_resolved": "https://registry.npmjs.org/cordova-plugin-geofence/-/cordova-plugin-geofence-0.7.0.tgz",
   "_shasum": "bf3ed70a4a582d1e3579659cf365e2e378890f25",
   "_spec": "cordova-plugin-geofence",
-  "_where": "/Users/moramadan/Documents/ionic work/test tahweel geofence/tahweel",
   "author": {
-    "name": "Cowbell Labs"
+    "name": ""
   },
   "bugs": {
     "url": "https://github.com/cowbell/cordova-plugin-geofence/issues"
@@ -52,7 +51,7 @@
       "version": ">=5.0.0"
     }
   ],
-  "homepage": "https://github.com/cowbell/cordova-plugin-geofence#readme",
+  "homepage": "https://github.com/MohamedMardona/ionic-geofence.git#readme",
   "keywords": [
     "cordova",
     "plugin",
@@ -68,7 +67,7 @@
   "name": "cordova-plugin-geofence",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cowbell/cordova-plugin-geofence.git"
+    "url": "git+https://github.com/MohamedMardona/ionic-geofence.git"
   },
   "scripts": {
     "posttest": "sed -i 's/play-services-location:9.8.0/play-services-location:+/g' plugin.xml",
