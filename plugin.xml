@@ -5,8 +5,8 @@
     <description>Geofence plugin</description>
     <license>Apache 2.0</license>
     <keywords>phonegap,background geolocation, geofence</keywords>
-    <repo>https://github.com/cowbell/cordova-plugin-geofence.git</repo>
-    <issue>https://github.com/cowbell/cordova-plugin-geofence/issues</issue>
+    <repo>https://github.com/MohamedMardona/ionic-geofence.git </repo>
+    <issue>https://github.com/MohamedMardona/ionic-geofence/issues</issue>
     <engines>
         <engine name="cordova" version=">=5.0.0" />
     </engines>
@@ -112,12 +112,12 @@
 
     <!-- ios -->
     <platform name="ios">
-        <preference name="GEOFENCE_ALWAYS_USAGE_DESCRIPTION" default="${EXECUTABLE_NAME} Would Like to Use Your Current Location Even In Background." />
+        <preference name="GEOFENCE_ALWAYS_USAGE_DESCRIPTION" default="App Would Like to Use Your Current Location Even In Background." />
         <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
             <string>$GEOFENCE_ALWAYS_USAGE_DESCRIPTION</string>
         </config-file>
 
-        <preference name="GEOFENCE_IN_USE_USAGE_DESCRIPTION" default="${EXECUTABLE_NAME} Would Like to Use Your Current Location When In Use." />
+        <preference name="GEOFENCE_IN_USE_USAGE_DESCRIPTION" default="App Would Like to Use Your Current Location When In Use." />
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
             <string>$GEOFENCE_IN_USE_USAGE_DESCRIPTION</string>
         </config-file>
