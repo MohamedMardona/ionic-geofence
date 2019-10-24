@@ -31,7 +31,7 @@ cordova plugin add cordova-plugin-geofence
 My custom plugin
 
 ```
-cordova plugin add https://github.com/MohamedMardona/ionic-geofence.git
+cordova plugin add https://github.com/MohamedMardona/ionic-geofence.git --variable GEOFENCE_IN_USE_USAGE_DESCRIPTION="your usage message" --variable GEOFENCE_ALWAYS_USAGE_DESCRIPTION="your usage message"
 ```
 
 ## Note
